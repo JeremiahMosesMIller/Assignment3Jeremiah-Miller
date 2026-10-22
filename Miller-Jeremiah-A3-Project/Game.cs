@@ -33,6 +33,8 @@ namespace MohawkGame2D
 
         {
 
+            //CURRENT GOALS! Figure out how to actually use the function so that the trees can be placed. Also learn how to make meteorite move from the left to rightside of the Screen
+
             void DrawMeteorite(int x, int y)
             {
                 Draw.SetFillColor(255, 255, 0);
@@ -57,11 +59,38 @@ namespace MohawkGame2D
 
             }
 
+            //Think my main goal will be to just get the objects done., then I can focus on getting the meteorite to move
+
+            //Floor
+            Draw.SetFillColor(165, 42, 42);
+
+            Draw.Rectangle(0, 380, 400, 20);
+
+            
+           
+            }
 
 
 
 
 
+
+
+// Tree 
+            void DrawTree(int x, int y)
+            {
+                Draw.SetFillColor(101, 67, 33);
+
+                Draw.Rectangle(0, 160, 50, 240);
+
+                Draw.SetFillColor(1, 50, 32);
+
+                Draw.Rectangle(0, 220, 120, 60);
+
+                Draw.SetFillColor(1, 50, 32);
+
+                Draw.Rectangle(0, 160, 100, 60);
+            }
 
 
 
@@ -72,4 +101,4 @@ namespace MohawkGame2D
         }
     }
 
-}
+
