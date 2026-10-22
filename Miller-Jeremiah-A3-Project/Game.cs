@@ -13,9 +13,7 @@ namespace MohawkGame2D
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
-        float y = 0.0f;
-        float x = 0.0f;
-        float speed = 20.0f;
+        
 
         public void Setup()
         {
@@ -23,34 +21,53 @@ namespace MohawkGame2D
             Window.SetSize(400, 400);
             Window.ClearBackground(20);
             float y = 0.0f;
-                float x = 0.0f;
+            float x = 0.0f;
             float speed = 20.0f;
             speed = Random.Float(15, 50);
-         
         }
 
         /// <summary>
         ///     Update runs every frame.
         /// </summary>
         public void Update()
+
         {
-           
-            void DrawApple(int x, int y, int height, int width)
-                {
 
+            void DrawMeteorite(int x, int y)
+            {
+                Draw.SetFillColor(255, 255, 0);
 
-                Draw.Circle(200, 200, 30);
+            Draw.Triangle(20, 10, 100, 60, 50, 40);
+
+            Draw.SetFillColor(255, 0, 0);
+
+            Draw.Triangle(50, 10, 100, 60, 50, 40);
+
+            Draw.SetFillColor(255, 255, 0);
+
+            Draw.Triangle(80, 40, 100, 60, 50, 40);
+
+            Draw.SetFillColor(255, 95, 21);
+
+            Draw.Triangle(100, 60, 100, 80, 50, 40);
+
             Draw.SetFillColor(30, 30, 20);
 
-            Draw.Rectangle(195, 160, 10, 25);
-             Draw.SetFillColor(100, 0, 0);
-
-                x = 50;
-             
+            Draw.Circle(90, 65, 15);
 
             }
 
-            
+
+
+
+
+
+
+
+
+
+
+
 
         }
     }
