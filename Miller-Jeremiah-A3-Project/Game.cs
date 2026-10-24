@@ -8,22 +8,30 @@ namespace MohawkGame2D
     /// <summary>
     ///     Your game code goes inside this class!
     /// </summary>
+    /// 
+
     public class Game
     {
-        /// <summary>
-        ///     Setup runs once before the game loop begins.
-        /// </summary>
-        
+       
+public class Meteorite
+        {
+            Meteorite meteorite1 = new Meteorite();
+
+            float y = 0.0f;
+            float x = 0.0f;
+            float speed = 20.0f;
+
+            Vector2 direction = new Vector2(0, 0);
+           
+
+        }
 
         public void Setup()
         {
 
             Window.SetSize(400, 400);
             Window.ClearBackground(20);
-            float y = 0.0f;
-            float x = 0.0f;
-            float speed = 20.0f;
-            speed = Random.Float(15, 50);
+            
         }
 
         /// <summary>
@@ -35,12 +43,17 @@ namespace MohawkGame2D
 
         {
             Window.ClearBackground(Color.Black);
+         
             // stars
             int size = 10;
-            int x = Input.GetMouseX();
-            int y = 70;
+           int x = Input.GetMouseX();
+            int y = 0;
+
+            
          
 
+
+           
             Draw.SetFillColor(0, 0, 210);
             Draw.Square(x, y, size);
             Drawstars(x + 20, y + 20);
