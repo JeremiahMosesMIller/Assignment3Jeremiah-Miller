@@ -40,11 +40,63 @@ namespace MohawkGame2D
            int x = Input.GetMouseX();
             int y = 0;
 
-            
-         
+            DrawMeteorite(100, 80);
+
+            void DrawMeteorite(int x, int y)
+            {
+
+                Vector2 flamePosition1 = new Vector2(20, 10);
+                Vector2 flamePosition2 = new Vector2(100, 60);
+                Vector2 flamePosition3 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 255, 0);
+                Draw.Triangle(flamePosition1, flamePosition2, flamePosition3);
+
+                Vector2 flamePosition4 = new Vector2(50, 10);
+                Vector2 flamePosition5 = new Vector2(100, 60);
+                Vector2 flamePosition6 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 0, 0);
+                Draw.Triangle(flamePosition4, flamePosition5, flamePosition6);
 
 
-           
+                Vector2 flamePosition7 = new Vector2(80, 40);
+                Vector2 flamePosition8 = new Vector2(100, 60);
+                Vector2 flamePosition9 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 255, 0);
+                Draw.Triangle(flamePosition7, flamePosition8, flamePosition9);
+
+                Vector2 flamePosition10 = new Vector2(20, 10);
+                Vector2 flamePosition11 = new Vector2(100, 60);
+                Vector2 flamePosition12 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 95, 21);
+                Draw.Triangle(flamePosition10, flamePosition11, flamePosition12);
+
+                //meteorite body
+                Vector2 MeteoritePosition1 = new Vector2(90, 65);
+
+                Draw.SetFillColor(30, 30, 20);
+                Draw.Circle(MeteoritePosition1, 15);
+
+               
+
+
+              
+
+       
+
+
+
+
+            }
+
+
+
+
+
+
             Draw.SetFillColor(0, 0, 210);
             Draw.Square(x, y, size);
             Drawstars(x + 20, y + 20);
@@ -70,9 +122,9 @@ namespace MohawkGame2D
             Drawstars(x - 270, y + 41);
             Drawstars(x - 286, y + 58);
 
-          
-                
-             
+
+
+
 
 
             // if (Input.IsKeyboardKeyDown(KeyboardKey.Space))
@@ -89,29 +141,6 @@ namespace MohawkGame2D
 
 
 
-            //Meteorite Flames
-
-            Draw.SetFillColor(255, 255, 0);
-
-            Draw.Triangle(20, 10, 100, 60, 50, 40);
-
-            Draw.SetFillColor(255, 0, 0);
-
-            Draw.Triangle(50, 10, 100, 60, 50, 40);
-
-            Draw.SetFillColor(255, 255, 0);
-
-            Draw.Triangle(80, 40, 100, 60, 50, 40);
-
-            Draw.SetFillColor(255, 95, 21);
-
-            Draw.Triangle(100, 60, 100, 80, 50, 40);
-
-            Draw.SetFillColor(30, 30, 20);
-
-            //meteorite body
-
-            Draw.Circle(new Vector2(90, 65), 15);
 
 
 
@@ -154,39 +183,14 @@ namespace MohawkGame2D
 
 
 
-        void DrawMeteorite(float x, float y)
-            {
-                //Flames
-
-                Draw.SetFillColor(255, 255, 0);
-
-                Draw.Triangle(20, 10, 100, 60, 50, 40);
-
-                Draw.SetFillColor(255, 0, 0);
-
-                Draw.Triangle(50, 10, 100, 60, 50, 40);
-
-                Draw.SetFillColor(255, 255, 0);
-
-                Draw.Triangle(80, 40, 100, 60, 50, 40);
-
-                Draw.SetFillColor(255, 95, 21);
-
-                Draw.Triangle(100, 60, 100, 80, 50, 40);
-
-                Draw.SetFillColor(30, 30, 20);
-
-                //meteorite body
-
-                Draw.Circle(new Vector2(90, 65), 15);
-
-
+      
+       
 
               
 
 
 
-            }
+            
 
 
         
