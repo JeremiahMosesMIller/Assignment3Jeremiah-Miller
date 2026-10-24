@@ -121,7 +121,6 @@ namespace MohawkGame2D
 
         Vector2 offset = new Vector2(0, 0); 
 
-            Vector3 TriPosition = new Vector3(20, 100, 50);
 
         //while I initially waa going to add a vector to everything, I'm guessing I don't need to.
         //because I'll only have one meteorite at a time on screen.
