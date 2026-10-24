@@ -38,11 +38,37 @@ namespace MohawkGame2D
             // stars
             int size = 10;
             int x = Input.GetMouseX();
-            int y = Input.GetMouseY();
+            int y = 70;
+         
+
             Draw.SetFillColor(0, 0, 210);
             Draw.Square(x, y, size);
             Drawstars(x + 20, y + 20);
+            Drawstars(x + 23, y + 58);
+            Drawstars(x + 47, y + 86);
+            Drawstars(x + 23, y + 20);
+            Drawstars(x + 88, y + 94);
+            Drawstars(x + 17, y + 38);
+            Drawstars(x + 380, y + 32);
+            Drawstars(x + 350, y + 76);
+            Drawstars(x + 230, y + 40);
+            Drawstars(x + 270, y + 49);
+            Drawstars(x + 286, y + 58);
+            Drawstars(x - 20, y + 20);
+            Drawstars(x - 23, y + 58);
+            Drawstars(x - 47, y + 86);
+            Drawstars(x - 54, y + 77);
+            Drawstars(x - 74, y + 22);
+            Drawstars(x - 17, y + 38);
+            Drawstars(x - 300, y + 47);
+            Drawstars(x - 239, y + 81);
+            Drawstars(x - 230, y + 71);
+            Drawstars(x - 270, y + 41);
+            Drawstars(x - 286, y + 58);
+
           
+                
+             
 
 
             // if (Input.IsKeyboardKeyDown(KeyboardKey.Space))
