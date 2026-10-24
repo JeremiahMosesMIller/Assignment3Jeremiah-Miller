@@ -12,15 +12,15 @@ namespace MohawkGame2D
 
     public class Game
     {
-       
 
+        Meteorite Meteorite1 = new Meteorite();
 
         public void Setup()
         {
-
             Window.SetSize(400, 400);
-            Window.ClearBackground(20);
-            
+
+           // Meteorite1.Setup();
+
         }
 
         /// <summary>
@@ -31,8 +31,10 @@ namespace MohawkGame2D
             
 
         {
-            Window.ClearBackground(Color.Black);
-         
+            Window.ClearBackground(20);
+
+            
+
             // stars
             int size = 10;
            int x = Input.GetMouseX();
