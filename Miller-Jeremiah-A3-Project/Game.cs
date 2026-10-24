@@ -13,18 +13,7 @@ namespace MohawkGame2D
     public class Game
     {
        
-public class Meteorite
-        {
-            Meteorite meteorite1 = new Meteorite();
 
-            float y = 0.0f;
-            float x = 0.0f;
-            float speed = 20.0f;
-
-            Vector2 direction = new Vector2(0, 0);
-           
-
-        }
 
         public void Setup()
         {
@@ -191,7 +180,7 @@ public class Meteorite
 
 
 
-                //Think my main goal will be to just get the objects done., then I can focus on getting the meteorite to move
+              
 
 
 
