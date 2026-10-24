@@ -7,8 +7,7 @@ using System.Text;
 namespace MohawkGame2D
 {
 
-    public class Meteorite
-    {
+  
        
 
         
@@ -20,36 +19,43 @@ namespace MohawkGame2D
     }
     public class Meteorite
     {
-        float x = 0f;
-            float y = 0f;
 
-        Vector2 Direction = new Vector2(0, 0);
-        float speed = 1.0f;
+    
+            float x = 0.0f;
+            float y = 0.0f;
+    float speed = 20f;
+
+        
+     
 
         public void Setup ()
         {
 
-            //     if(Meteorite)
+
+        speed = MohawkGame2D.Random.Float(5, 15);
+
+        x = MohawkGame2D.Random.Float(50, 100);
+        y = MohawkGame2D.Random.Float(50, 100);
 
 
-         
-        }
+
+
+    }
 
         public void Update()
         {
 
             x += speed * Time.DeltaTime;
-            x += speed * Time.DeltaTime;
-
-
             DrawMeteorite();
+           
 
-
-        }
+    }
 
     
         void DrawMeteorite()
         {
+
+
 
             Vector2 flamePosition1 = new Vector2(20, 10);
             Vector2 flamePosition2 = new Vector2(100, 60);
@@ -100,7 +106,7 @@ namespace MohawkGame2D
        
 
     }
-}
+
 
 //I had this for a while why I tried using Triangles with Vectors. I know you have 6 floats for a single triangle but there isn't a Vector6 that I'm aware of so I gave up on this path
 

@@ -15,16 +15,11 @@ namespace MohawkGame2D
 
         Meteorite Meteorite1 = new Meteorite();
 
-        
         public void Setup()
-        { 
-            
-            Meteorite1.Setup();
-
-
+        {
             Window.SetSize(400, 400);
 
-           
+           // Meteorite1.Setup();
 
         }
 
@@ -32,6 +27,8 @@ namespace MohawkGame2D
         ///     Update runs every frame.
         /// </summary>
         public void Update()
+
+
 
             
 
@@ -46,8 +43,73 @@ namespace MohawkGame2D
             int y = 0;
 
            
+            DrawMeteorite(100, 80);
 
-            
+
+          
+
+
+            DrawTree(x + 50, y);
+
+
+
+
+
+
+
+
+            // ON the verge of giving up, I used this  DrawTree(x + 80, y); beneath DrawTree(x + 50, y); ALl it did was make the trunk green?????
+
+           
+
+            void DrawMeteorite(float x, float y)
+            {
+
+                Vector2 flamePosition1 = new Vector2(20, 10);
+                Vector2 flamePosition2 = new Vector2(100, 60);
+                Vector2 flamePosition3 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 255, 0);
+                Draw.Triangle(flamePosition1, flamePosition2, flamePosition3);
+
+                Vector2 flamePosition4 = new Vector2(50, 10);
+                Vector2 flamePosition5 = new Vector2(100, 60);
+                Vector2 flamePosition6 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 0, 0);
+                Draw.Triangle(flamePosition4, flamePosition5, flamePosition6);
+
+
+                Vector2 flamePosition7 = new Vector2(80, 40);
+                Vector2 flamePosition8 = new Vector2(100, 60);
+                Vector2 flamePosition9 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 255, 0);
+                Draw.Triangle(flamePosition7, flamePosition8, flamePosition9);
+
+                Vector2 flamePosition10 = new Vector2(20, 10);
+                Vector2 flamePosition11 = new Vector2(100, 60);
+                Vector2 flamePosition12 = new Vector2(50, 40);
+
+                Draw.SetFillColor(255, 95, 21);
+                Draw.Triangle(flamePosition10, flamePosition11, flamePosition12);
+
+
+                Vector2 MeteoritePosition1 = new Vector2(90, 65);
+
+                Draw.SetFillColor(30, 30, 20);
+                Draw.Circle(MeteoritePosition1, 15);
+             
+
+
+              
+
+       
+
+
+
+
+            }
 
 
 
@@ -80,7 +142,7 @@ namespace MohawkGame2D
             Drawstars(x - 286, y + 58);
 
 
-            
+
 
 
 
@@ -112,6 +174,8 @@ namespace MohawkGame2D
 
             Draw.Rectangle(0, 380, 400, 20);
 
+
+
         }
 
         //CURRENT GOALS! Figure out how to actually use the function so that the trees can be placed. Also learn how to make meteorite move from the left to rightside of the Screen
@@ -121,12 +185,13 @@ namespace MohawkGame2D
 
         Vector2 offset = new Vector2(0, 0); 
 
+            Vector3 TriPosition = new Vector3(20, 100, 50);
 
         //while I initially waa going to add a vector to everything, I'm guessing I don't need to.
         //because I'll only have one meteorite at a time on screen.
 
 
-
+     
 
         void Drawstars(int x, int y)
         {
@@ -160,21 +225,23 @@ namespace MohawkGame2D
 
         //as far as I understand, and I am most likely wrong, is when you use int it acts like 'memory' in the sense that if you have int x = 70, if you type x while doing positions
         //it'll appear at 70. 
-            void DrawTree(int x = 50, int y = 180)
+            void DrawTree(int x, int y)
             {
 
+
+            Draw.Rectangle(200, 200, 40, 180);
+            Draw.SetFillColor(101, 67, 33);
+          
            
-                Draw.SetFillColor(101, 67, 33);
 
-                Draw.Rectangle(new Vector2(x, y), new Vector2(50, 180));
 
-                Draw.SetFillColor(1, 50, 32);
 
-                Draw.Rectangle(new Vector2(x - 220, y), new Vector2(120, 60));
+            Draw.SetFillColor(1, 50, 32);
+            Draw.Circle(220, 180, 80);
 
-                Draw.SetFillColor(1, 50, 32);
+      
 
-                Draw.Rectangle(new Vector2(x, y), new Vector2(100, 60));
+               
             }
 
         
