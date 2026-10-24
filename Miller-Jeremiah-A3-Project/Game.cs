@@ -31,7 +31,11 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
 
+            
+
         {
+            Window.ClearBackground(Color.Black);
+
 
             //CURRENT GOALS! Figure out how to actually use the function so that the trees can be placed. Also learn how to make meteorite move from the left to rightside of the Screen
 
@@ -46,12 +50,10 @@ namespace MohawkGame2D
             //because I'll only have one meteorite at a time on screen.
 
 
+            
+            //Meteorite Flames
 
-            void DrawMeteorite(int x, int y)
-            {
-                //Flames
-
-                Draw.SetFillColor(255, 255, 0);
+            Draw.SetFillColor(255, 255, 0);
 
             Draw.Triangle(20, 10, 100, 60, 50, 40);
 
@@ -73,19 +75,73 @@ namespace MohawkGame2D
 
             Draw.Circle(new Vector2(90, 65), 15);
 
-            
 
-            //Think my main goal will be to just get the objects done., then I can focus on getting the meteorite to move
+
+           
+
+            // stars
+            int size = 10;
+            int x = Input.GetMouseX();
+            int y = Input.GetMouseY();
+            Draw.SetFillColor(0, 0, 210);
+            Draw.Square(x, y, size);
+
+            Drawstars(x + 20, y + 20);
+
+            
 
             //Floor
             Draw.SetFillColor(165, 42, 42);
 
             Draw.Rectangle(0, 380, 400, 20);
 
+            
+
+
+
+            void Drawstars(int x, int y)
+            {
+
+  
+                Draw.SetFillColor(0, 0, 210);
+                Draw.Square (200, 30, 10);
+            }
+            void DrawMeteorite(float x, float y)
+            {
+                //Flames
+
+                Draw.SetFillColor(255, 255, 0);
+
+                Draw.Triangle(20, 10, 100, 60, 50, 40);
+
+                Draw.SetFillColor(255, 0, 0);
+
+                Draw.Triangle(50, 10, 100, 60, 50, 40);
+
+                Draw.SetFillColor(255, 255, 0);
+
+                Draw.Triangle(80, 40, 100, 60, 50, 40);
+
+                Draw.SetFillColor(255, 95, 21);
+
+                Draw.Triangle(100, 60, 100, 80, 50, 40);
+
+                Draw.SetFillColor(30, 30, 20);
+
+                //meteorite body
+
+                Draw.Circle(new Vector2(90, 65), 15);
+
+
+
+                //Think my main goal will be to just get the objects done., then I can focus on getting the meteorite to move
+
+
+
             }
 
-        }
 
+        }
 
 
 
