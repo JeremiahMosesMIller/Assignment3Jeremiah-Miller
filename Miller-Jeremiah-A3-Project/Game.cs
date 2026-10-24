@@ -13,6 +13,7 @@ namespace MohawkGame2D
     public class Game
     {
 
+
         Meteorite Meteorite1 = new Meteorite();
 
         public void Setup()
@@ -35,7 +36,7 @@ namespace MohawkGame2D
         {
             Window.ClearBackground(20);
 
-            
+          
 
             // stars
             int size = 10;

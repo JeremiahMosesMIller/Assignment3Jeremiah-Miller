@@ -25,6 +25,8 @@ namespace MohawkGame2D
             float y = 0.0f;
     float speed = 20f;
 
+ 
+
         
      
 
@@ -45,7 +47,8 @@ namespace MohawkGame2D
         public void Update()
         {
 
-            x += speed * Time.DeltaTime;
+        x += speed * Time.DeltaTime;
+
             DrawMeteorite();
            
 
@@ -55,9 +58,9 @@ namespace MohawkGame2D
         void DrawMeteorite()
         {
 
+ 
 
-
-            Vector2 flamePosition1 = new Vector2(20, 10);
+          Vector2 flamePosition1 = new Vector2(20, 10);
             Vector2 flamePosition2 = new Vector2(100, 60);
             Vector2 flamePosition3 = new Vector2(50, 40);
 
