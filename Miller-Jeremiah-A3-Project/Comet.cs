@@ -1,16 +1,14 @@
 ﻿using MohawkGame2D;
 using System;
-using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
 
 namespace Miller_Jeremiah_A3_Project
 {
     public class Comet
     {
-
         
 
+        float Comet1 = 30f;
         float x = 100.0f;
             float y = 30.0f;
 
@@ -25,16 +23,7 @@ namespace Miller_Jeremiah_A3_Project
         public void update()
         {
 
-
-
-
-
-
-
-
-
-            DrawComet();
-
+         
 
 
 
@@ -43,9 +32,11 @@ namespace Miller_Jeremiah_A3_Project
         {
             //Comet
 
+            Vector2 offset = new Vector2(0, 0);
+
             int height = 50;
             int width = 10;
-            x = 30;
+            x -= Time.DeltaTime * 30f;
             y = 30;
 
             Vector2 CometTrailLocation = new Vector2(x - 1, y - 30);
@@ -62,7 +53,10 @@ namespace Miller_Jeremiah_A3_Project
             Draw.FillColor = Color.LightGray;
             Draw.Ellipse(CometLocation, CometBody);
 
-         
+
+           
+
+
 
         }
 

@@ -16,14 +16,22 @@ namespace MohawkGame2D
 
     public class Game
     {
-        Comet comet1 = new Comet();
+        Comet Comet1 = new Comet();
+        float x = 100.0f;
+        float y = 30.0f;
+
+        float speed = 20.0f;
+        
 
 
         public void Setup()
         {
+
+            speed = MohawkGame2D.Random.Float(30, 50);
+            x = MohawkGame2D.Random.Float(50, 350);
             Window.SetSize(400, 400);
 
-            comet1.setup();
+            Comet1.setup();
             
           
             }
@@ -42,7 +50,7 @@ namespace MohawkGame2D
 
         {
 
-            comet1.update();
+            Comet1.update();
 
           
           
@@ -58,8 +66,8 @@ namespace MohawkGame2D
             int y = 0;
 
 
-            DrawComet(x, y);
-
+            DrawComet();
+            
 
             //
             DrawTree(x + 50, y);
@@ -138,52 +146,20 @@ namespace MohawkGame2D
             Draw.Rectangle(0, 380, 400, 20);
 
 
+
+          
             
 
-            DrawComet(x, y);
-
         }
 
-        //CURRENT GOALS! Figure out how to actually use the function so that the trees can be placed. Also learn how to make meteorite move from the left to rightside of the Screen
 
-        // SO messing around while watching Thursday's Lesson, I realised that topRectPosition just means rectangle position, or so I think. 
-        //I applied the same logic to Triangles, realizing that I might be able to use the same logic with Vector3 (idk what that is either tbh, just messing around.)
+       
 
-        Vector2 offset = new Vector2(0, 0); 
+          
 
-            Vector3 TriPosition = new Vector3(20, 100, 50);
-
-        //while I initially waa going to add a vector to everything, I'm guessing I don't need to.
-        //because I'll only have one meteorite at a time on screen.
-
-
-
-        void DrawComet (float x, float y)
-        {
-            //Comet
-
-            int height = 50;
-            int width = 10;
-            x = 30;
-            y = 30;
-
-            Vector2 CometTrailLocation = new Vector2(x - 1, y - 30);
-            Vector2 CometTrailBody = new Vector2(3, 5);
-
-            Draw.FillColor = Color.White;
-            Draw.Rectangle(CometTrailLocation, CometTrailBody);
-
-            CometTrailLocation += offset;
-
-            Vector2 CometLocation = new Vector2(x, y);
-            Vector2 CometBody = new Vector2(width, height);
-
-            Draw.FillColor = Color.LightGray;
-            Draw.Ellipse(CometLocation, CometBody);
-
-            CometLocation += offset;
-
-        }
+       
+       
+        
            
        
 
@@ -205,28 +181,63 @@ namespace MohawkGame2D
 
 
 
-      
-       
+        void DrawComet()
+        {
+            //Comet
 
-              
+            Vector2 offset = new Vector2(0, 0);
+
+            int height = 50;
+            int width = 10;
+            x = 30f;
+            y += Time.DeltaTime * 30f;
+
+            Vector2 CometTrailLocation = new Vector2(x - 1, y - 30);
+            Vector2 CometTrailBody = new Vector2(3, 5);
+
+            Draw.FillColor = Color.White;
+            Draw.Rectangle(CometTrailLocation, CometTrailBody);
 
 
 
-            
+            Vector2 CometLocation = new Vector2(x, y);
+            Vector2 CometBody = new Vector2(width, height);
+
+            Draw.FillColor = Color.LightGray;
+            Draw.Ellipse(CometLocation, CometBody);
 
 
-        
+            if (y > 420)
+            {
+                y = -50;
+
+            }
+
+            //getting somewhere. Ask how to make it work in the 'Comet Class'
+           
+
+        }
 
 
 
 
-        
 
-// Tree 
+
+
+
+
+
+
+
+
+
+
+
+        // Tree 
 
         //as far as I understand, and I am most likely wrong, is when you use int it acts like 'memory' in the sense that if you have int x = 70, if you type x while doing positions
         //it'll appear at 70. 
-            void DrawTree(int x, int y)
+        void DrawTree(int x, int y)
             {
 
             Draw.SetFillColor(101, 67, 33);
