@@ -1,5 +1,5 @@
 ﻿// Include the namespaces (code libraries) you need below.
-using C;
+using Miller_Jeremiah_A3_Project;
 using System;
 using System.Numerics;
 
@@ -11,20 +11,21 @@ namespace MohawkGame2D
     /// </summary>
     /// 
 
-
+   
 
 
     public class Game
     {
-        Comet Comet1 = new Comet();
+        Comet comet1 = new Comet();
+
 
         public void Setup()
         {
             Window.SetSize(400, 400);
 
-         
-            Comet1.Setup();
+            comet1.setup();
             
+          
             }
         
 
@@ -41,11 +42,12 @@ namespace MohawkGame2D
 
         {
 
+            comet1.update();
+
           
           
 
 
-            Comet1.Update();
             Window.ClearBackground(20);
 
           
@@ -55,6 +57,8 @@ namespace MohawkGame2D
            int x = Input.GetMouseX();
             int y = 0;
 
+
+            DrawComet(x, y);
 
 
             //

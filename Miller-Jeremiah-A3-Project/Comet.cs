@@ -6,32 +6,34 @@ using System.Text;
 
 namespace Miller_Jeremiah_A3_Project
 {
-    public class Meteorite
+    public class Comet
     {
 
-        float x = 0.0f;
-            float y = 0.0f;
+        
+
+        float x = 100.0f;
+            float y = 30.0f;
 
         float speed = 20.0f;
        public void setup()
         {
 
             speed = MohawkGame2D.Random.Float(30, 50);
-            y = MohawkGame2D.Random.Float(50, 100);
+            x = MohawkGame2D.Random.Float(50, 350);
         }
 
         public void update()
         {
 
-          
-           
 
 
 
 
-           
 
 
+
+
+            DrawComet();
 
 
 
