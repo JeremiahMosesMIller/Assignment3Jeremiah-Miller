@@ -1,4 +1,5 @@
 ﻿// Include the namespaces (code libraries) you need below.
+using C;
 using System;
 using System.Numerics;
 
@@ -10,26 +11,22 @@ namespace MohawkGame2D
     /// </summary>
     /// 
 
+
+
+
     public class Game
     {
-
-
-
-
-        
-        Meteorite Meteorite1 = new Meteorite();
+        Comet Comet1 = new Comet();
 
         public void Setup()
         {
             Window.SetSize(400, 400);
 
-            float Meteorite =- 20f;
-            Meteorite += Time.DeltaTime * 200f;
-
-            Meteorite1.Setup();
-
-        }
-
+         
+            Comet1.Setup();
+            
+            }
+        
 
 
       
@@ -44,7 +41,11 @@ namespace MohawkGame2D
 
         {
 
-            Meteorite1.Update();
+          
+          
+
+
+            Comet1.Update();
             Window.ClearBackground(20);
 
           
@@ -54,13 +55,9 @@ namespace MohawkGame2D
            int x = Input.GetMouseX();
             int y = 0;
 
-           
-            
 
 
-          
-
-
+            //
             DrawTree(x + 50, y);
 
 
@@ -137,6 +134,9 @@ namespace MohawkGame2D
             Draw.Rectangle(0, 380, 400, 20);
 
 
+            
+
+            DrawComet(x, y);
 
         }
 
@@ -153,7 +153,42 @@ namespace MohawkGame2D
         //because I'll only have one meteorite at a time on screen.
 
 
-     
+
+        void DrawComet (float x, float y)
+        {
+            //Comet
+
+            int height = 50;
+            int width = 10;
+            x = 30;
+            y = 30;
+
+            Vector2 CometTrailLocation = new Vector2(x - 1, y - 30);
+            Vector2 CometTrailBody = new Vector2(3, 5);
+
+            Draw.FillColor = Color.White;
+            Draw.Rectangle(CometTrailLocation, CometTrailBody);
+
+            CometTrailLocation += offset;
+
+            Vector2 CometLocation = new Vector2(x, y);
+            Vector2 CometBody = new Vector2(width, height);
+
+            Draw.FillColor = Color.LightGray;
+            Draw.Ellipse(CometLocation, CometBody);
+
+            CometLocation += offset;
+
+        }
+           
+       
+
+          
+
+
+        
+
+
 
         void Drawstars(int x, int y)
         {
@@ -190,9 +225,9 @@ namespace MohawkGame2D
             void DrawTree(int x, int y)
             {
 
-
-            Draw.Rectangle(200, 200, 40, 180);
             Draw.SetFillColor(101, 67, 33);
+            Draw.Rectangle(200, 200, 40, 180);
+     
           
            
 
