@@ -28,7 +28,17 @@ namespace MohawkGame2D
             Window.SetSize(400, 400);
 
             Comet1.Setup();
-            Stars1.Setup();
+
+
+            Stars[] Stars = new Stars[100];
+
+            for (int i = 0; i < Stars.Length; i++)
+            {
+                Stars[i] = new Stars();
+
+                Stars[i].Setup();
+            }
+
 
         }
 
@@ -50,7 +60,7 @@ namespace MohawkGame2D
             Window.ClearBackground(20);
 
             Comet1.Update();
-            Stars1.Update();
+        
 
 
 
@@ -77,33 +87,6 @@ namespace MohawkGame2D
 
 
 
-
-
-
-            Draw.SetFillColor(0, 0, 210);
-            Draw.Square(x, y, size);
-            Drawstars(x + 20, y + 20);
-            Drawstars(x + 23, y + 58);
-            Drawstars(x + 47, y + 86);
-            Drawstars(x + 23, y + 20);
-            Drawstars(x + 88, y + 94);
-            Drawstars(x + 17, y + 38);
-            Drawstars(x + 380, y + 32);
-            Drawstars(x + 350, y + 76);
-            Drawstars(x + 230, y + 40);
-            Drawstars(x + 270, y + 49);
-            Drawstars(x + 286, y + 58);
-            Drawstars(x - 20, y + 20);
-            Drawstars(x - 23, y + 58);
-            Drawstars(x - 47, y + 86);
-            Drawstars(x - 54, y + 77);
-            Drawstars(x - 74, y + 22);
-            Drawstars(x - 17, y + 38);
-            Drawstars(x - 300, y + 47);
-            Drawstars(x - 239, y + 81);
-            Drawstars(x - 230, y + 71);
-            Drawstars(x - 270, y + 41);
-            Drawstars(x - 286, y + 58);
 
 
 
@@ -135,28 +118,22 @@ namespace MohawkGame2D
 
 
 
-        
-
-
-
-        void Drawstars(int x, int y)
-        {
-
-
-            Draw.SetFillColor(0, 0, 210);
-            Draw.Square(x, y, 10);
-        }
+        float[] xcoords = new float[10];
+        int[] value = [50, 60, 70, 100, 120, 170, 200, 233, 240, 275, 289, 300, 312, 323, 339, 341, 351, 362, 369, 370, 389, 399];
 
 
 
 
-     
-            
-
-            //getting somewhere. Ask how to make it work in the 'Comet Class'
 
 
-        
+
+
+
+
+        //getting somewhere. Ask how to make it work in the 'Comet Class'
+
+
+
 
 
 
