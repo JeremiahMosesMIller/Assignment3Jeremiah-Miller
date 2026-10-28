@@ -10,32 +10,39 @@ namespace MohawkGame2D
     {
 
        
-
+        
        
-        public static int Length { get; private set; }
-
+      
+      
+        
         public void Setup()
         {
+
+           
+
+        }
+        public void Update() 
+        {
+
+            DrawStar();
            
         }
-        public void Update()
+
+        void DrawStar()
         {
 
-            DrawStars();
+            int size = 10;
+            int x = Input.GetMouseX();
+            int y = 0;
 
-
-        }
-
-
-        // stars
-        void DrawStar(int x, int y, int sizey)
-        {
             Vector2 StarBody = new Vector2(x, y);
             Draw.SetFillColor(0, 0, 210);
             Draw.Square(x, y, 5);
 
-         
-        }
+          
 
+//WOOOORRRRRRRRRRRRRRKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+
+        }
     }
-}
+    }

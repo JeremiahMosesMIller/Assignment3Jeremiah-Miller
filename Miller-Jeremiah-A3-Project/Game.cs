@@ -70,6 +70,7 @@ namespace MohawkGame2D
             int x = Input.GetMouseX();
             int y = 0;
 
+        
 
 
             //
@@ -118,8 +119,7 @@ namespace MohawkGame2D
 
 
 
-        float[] xcoords = new float[10];
-        int[] value = [50, 60, 70, 100, 120, 170, 200, 233, 240, 275, 289, 300, 312, 323, 339, 341, 351, 362, 369, 370, 389, 399];
+       
 
 
 
