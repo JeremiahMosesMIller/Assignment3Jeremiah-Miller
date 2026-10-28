@@ -131,15 +131,6 @@ namespace MohawkGame2D
 
 
 
-
-
-
-
-
-
-
-
-
             //Floor
             Draw.SetFillColor(165, 42, 42);
 
@@ -147,26 +138,11 @@ namespace MohawkGame2D
 
 
 
-          
-            
-
         }
 
 
        
 
-          
-
-       
-       
-        
-           
-       
-
-          
-
-
-        
 
 
 
@@ -222,17 +198,6 @@ namespace MohawkGame2D
 
 
 
-
-
-
-
-
-
-
-
-
-
-
         // Tree 
 
         //as far as I understand, and I am most likely wrong, is when you use int it acts like 'memory' in the sense that if you have int x = 70, if you type x while doing positions
@@ -256,11 +221,7 @@ namespace MohawkGame2D
                
             }
 
-        
-
-
-
-
+     
 
 
 
