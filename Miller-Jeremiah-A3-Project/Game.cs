@@ -36,7 +36,7 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            Window.ClearBackground(5);
+            Window.ClearBackground(3);
             Comet1.Update();
             Comet2.Update();
             Meteorite1.Update();
@@ -66,7 +66,7 @@ namespace MohawkGame2D
             Draw.Rectangle(200, 200, 40, 180);
 
 
-            Draw.SetFillColor(0, 0, 0);
+            Draw.SetFillColor(44, 45, 45);
             Draw.Circle(220, 180, 80);
             Draw.Circle(180, 180, 60);
             Draw.Circle(260, 120, 50);

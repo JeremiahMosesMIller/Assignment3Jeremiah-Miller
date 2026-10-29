@@ -50,7 +50,7 @@ namespace MohawkGame2D
 
          
 
-            Draw.SetFillColor(255, 0, 0);
+            Draw.SetFillColor(255, 255, 255);
             Draw.Rectangle(CometTrailLocation, CometTrailBody);
 
        
