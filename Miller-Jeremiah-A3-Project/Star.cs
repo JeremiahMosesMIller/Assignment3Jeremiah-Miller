@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace MohawkGame2D
 {
@@ -24,6 +25,7 @@ namespace MohawkGame2D
         void Drawstar()
         {
 
+            
             Draw.SetFillColor(255, 255, 255);
             Draw.Circle(x, y, 4);
             Draw.SetFillColor(20);

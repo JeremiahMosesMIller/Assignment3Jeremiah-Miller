@@ -51,7 +51,7 @@ namespace MohawkGame2D
 
             DrawTree(200 + 50, 0);
             //Floor
-            Draw.SetFillColor(0, 0, 0);
+            Draw.SetFillColor(100, 110, 100);
 
             Draw.Rectangle(0, 380, 400, 20);
         }
@@ -65,11 +65,13 @@ namespace MohawkGame2D
             Draw.SetFillColor(54, 55, 55);
             Draw.Rectangle(200, 200, 40, 180);
 
-
-            Draw.SetFillColor(44, 45, 45);
-            Draw.Circle(220, 180, 80);
+            Draw.SetFillColor(100, 110, 100);
             Draw.Circle(180, 180, 60);
             Draw.Circle(260, 120, 50);
+
+            Draw.SetFillColor(100, 110, 100);
+            Draw.Circle(220, 180, 80);
+           
 
 
         }
