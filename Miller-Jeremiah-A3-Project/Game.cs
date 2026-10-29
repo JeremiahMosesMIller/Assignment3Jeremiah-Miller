@@ -20,7 +20,7 @@ namespace MohawkGame2D
             Window.SetSize(400, 400);
 
             Comet1.Setup();
-
+            Meteorite1.Setup();
             
           
         }
@@ -31,6 +31,7 @@ namespace MohawkGame2D
         {
             Window.ClearBackground(20);
             Comet1.Update();
+            Meteorite1.Update();
 
 
          

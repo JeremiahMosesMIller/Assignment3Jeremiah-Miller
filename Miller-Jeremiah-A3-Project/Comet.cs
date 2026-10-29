@@ -43,7 +43,7 @@ namespace MohawkGame2D
             int height = 50;
             int width = 10;
             x += Time.DeltaTime * 0f; 
-            y += Time.DeltaTime * 30f;
+            y += Time.DeltaTime * 100f;
 
             Vector2 CometTrailLocation = new Vector2(x - 1, y - 30);
             Vector2 CometTrailBody = new Vector2(3, 5);
