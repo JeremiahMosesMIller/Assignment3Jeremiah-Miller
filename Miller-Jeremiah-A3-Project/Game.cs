@@ -15,7 +15,9 @@ namespace MohawkGame2D
         Comet Comet2 = new Comet();
         Star star1 = new Star();
         Meteorite Meteorite1 = new Meteorite();
-       
+        
+        Star[] Stars;
+
 
         public void Setup()
         {
@@ -25,7 +27,8 @@ namespace MohawkGame2D
             Comet2.Setup();
             Meteorite1.Setup();
             star1.Setup();
-            
+
+            StarRandom();
           
         }
         /// <summary>
@@ -39,9 +42,12 @@ namespace MohawkGame2D
             Meteorite1.Update();
             star1.Update();
             //something I realized is you kinda need the Class1.Update in your files for it to work. Which is kinda the main thing I think I had difficulty with
+            for (int i = 0; i < Stars.Length; i++)
+            {
+                Stars[i].Update();
+            }
 
-
-       
+            
 
             DrawTree(200 + 50, 0);
             //Floor
@@ -60,18 +66,29 @@ namespace MohawkGame2D
             Draw.Rectangle(200, 200, 40, 180);
 
 
-
-
-
-
             Draw.SetFillColor(1, 50, 32);
             Draw.Circle(220, 180, 80);
 
 
+        }
+
+        public void StarRandom()
+        {
+            Stars = new Star[100];
+
+            for (int i = 0; i < Stars.Length; i++)
+            {
+
+                Stars[i] = new Star();
+                Stars[i].Setup();
+
+
+
+            }
 
 
         }
-     
+
 
 
 

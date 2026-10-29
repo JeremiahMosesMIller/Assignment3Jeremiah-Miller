@@ -6,57 +6,31 @@ namespace MohawkGame2D
 {
     public class Star
     {
-        Star[] Stars;
+        int x = 0;
+        int y = 0;
         public void Setup()
         {
-         
-
+            x = Random.Integer(0, 400);
+            y = Random.Integer(0,200);
         }
         public void Update()
         {
-
-
-
-          
            
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-            Drawstars();
-        }
-
-        public void StarRandom()
-        {
-            Stars = new Star[100];
-
-            for (int i = 5; i < Stars.Length; i++)
-            {
-
-                Stars[i] = new Star();
-                Stars[i].Setup();
-
-            }
-
-
+            Drawstar();
         }
 
 
 
-        void Drawstars()
+        void Drawstar()
         {
-
-            int x = 50;
-            int y = 50;
 
             Draw.SetFillColor(0, 0, 210);
-            Draw.Square(x, y, 5);
+            Draw.Circle(x, y, 4);
+            Draw.SetFillColor(20);
+            Draw.Circle(x, y, 2);
+
+
+
         }
 
     }

@@ -31,23 +31,23 @@ namespace MohawkGame2D
             
             
 
-            Vector2 offset = new Vector2(0, 0);
+         
 
             Draw.SetFillColor(255, 255, 0);
 
-            Draw.Triangle(20, 10, 100, 60, Input.GetMouseX(), Input.GetMouseY());
+            Draw.Triangle(Input.GetMouseX() + 20, Input.GetMouseY() + 10, Input.GetMouseX() + 100, Input.GetMouseY() + 60, Input.GetMouseX() +50, Input.GetMouseY() + 40);
 
             Draw.SetFillColor(255, 0, 0);
 
-            Draw.Triangle(50, 10, 100, 60, Input.GetMouseX(), Input.GetMouseY());
+            Draw.Triangle(Input.GetMouseX() + 50, +Input.GetMouseY() + 10, Input.GetMouseX() + 100, +Input.GetMouseY() + 60, Input.GetMouseX() + 50, Input.GetMouseY() + 40);
 
             Draw.SetFillColor(255, 255, 0);
 
-            Draw.Triangle(80, 40, 100, 60, Input.GetMouseX(), Input.GetMouseY());
+            Draw.Triangle(Input.GetMouseX() + 80, Input.GetMouseY() + 40, Input.GetMouseX() + 100, Input.GetMouseY() + 60, Input.GetMouseX() + 50, Input.GetMouseY() + 40);
 
             Draw.SetFillColor(255, 95, 21);
 
-            Draw.Triangle(100, 60, 100, 80, Input.GetMouseX(), Input.GetMouseY());
+            Draw.Triangle(Input.GetMouseX() + 100, Input.GetMouseY() + 60, Input.GetMouseX() + 100, Input.GetMouseY() + 80, Input.GetMouseX() + 50, Input.GetMouseY() + 40);
 
             Draw.SetFillColor(30, 30, 20);
 
@@ -55,7 +55,7 @@ namespace MohawkGame2D
 
             //meteorite body
 
-            Draw.Circle(new Vector2(Input.GetMouseX(), Input.GetMouseY()), 15);
+            Draw.Circle(Input.GetMouseX() + 90, Input.GetMouseY() + 60, 25);
 
          
 
