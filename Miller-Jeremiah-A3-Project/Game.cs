@@ -51,7 +51,7 @@ namespace MohawkGame2D
 
             DrawTree(200 + 50, 0);
             //Floor
-            Draw.SetFillColor(165, 42, 42);
+            Draw.SetFillColor(120, 70, 38);
 
             Draw.Rectangle(0, 380, 400, 20);
         }

@@ -24,7 +24,7 @@ namespace MohawkGame2D
         void Drawstar()
         {
 
-            Draw.SetFillColor(0, 0, 210);
+            Draw.SetFillColor(255, 255, 0);
             Draw.Circle(x, y, 4);
             Draw.SetFillColor(20);
             Draw.Circle(x, y, 2);

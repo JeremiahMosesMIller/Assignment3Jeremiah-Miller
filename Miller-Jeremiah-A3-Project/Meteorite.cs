@@ -57,11 +57,11 @@ namespace MohawkGame2D
 
             Draw.Circle(Input.GetMouseX() + 90, Input.GetMouseY() + 60, 25);
 
-         
+
 
             //Think my main goal will be to just get the objects done., then I can focus on getting the meteorite to move
 
-
+            
 
         }
 
