@@ -12,6 +12,8 @@ namespace MohawkGame2D
     public class Game
     {
         Comet Comet1 = new Comet();
+        Comet Comet2 = new Comet();
+        Star star1 = new Star();
         Meteorite Meteorite1 = new Meteorite();
        
 
@@ -20,7 +22,9 @@ namespace MohawkGame2D
             Window.SetSize(400, 400);
 
             Comet1.Setup();
+            Comet2.Setup();
             Meteorite1.Setup();
+            star1.Setup();
             
           
         }
@@ -31,10 +35,13 @@ namespace MohawkGame2D
         {
             Window.ClearBackground(20);
             Comet1.Update();
+            Comet2.Update();
             Meteorite1.Update();
+            star1.Update();
+            //something I realized is you kinda need the Class1.Update in your files for it to work. Which is kinda the main thing I think I had difficulty with
 
 
-         
+       
 
             DrawTree(200 + 50, 0);
             //Floor
@@ -64,8 +71,8 @@ namespace MohawkGame2D
 
 
         }
-
      
+
 
 
 

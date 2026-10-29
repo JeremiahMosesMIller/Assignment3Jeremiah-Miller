@@ -29,7 +29,7 @@ namespace MohawkGame2D
 
         void RandomizeNewComet()
         {
-            speed = MohawkGame2D.Random.Float(30, 100);
+            speed = MohawkGame2D.Random.Float(y += Time.DeltaTime * 100f, y += Time.DeltaTime * 200f);
             x = MohawkGame2D.Random.Float(20, 380);
            
         }
@@ -63,6 +63,7 @@ namespace MohawkGame2D
             if (y > 420)
             {
                 y = -50;
+
 
                 RandomizeNewComet();
             }
