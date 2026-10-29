@@ -36,7 +36,7 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            Window.ClearBackground(20);
+            Window.ClearBackground(5);
             Comet1.Update();
             Comet2.Update();
             Meteorite1.Update();
@@ -51,7 +51,7 @@ namespace MohawkGame2D
 
             DrawTree(200 + 50, 0);
             //Floor
-            Draw.SetFillColor(120, 70, 38);
+            Draw.SetFillColor(0, 0, 0);
 
             Draw.Rectangle(0, 380, 400, 20);
         }
@@ -62,12 +62,14 @@ namespace MohawkGame2D
         void DrawTree(int x, int y)
         {
 
-            Draw.SetFillColor(101, 67, 33);
+            Draw.SetFillColor(54, 55, 55);
             Draw.Rectangle(200, 200, 40, 180);
 
 
-            Draw.SetFillColor(1, 50, 32);
+            Draw.SetFillColor(0, 0, 0);
             Draw.Circle(220, 180, 80);
+            Draw.Circle(180, 180, 60);
+            Draw.Circle(260, 120, 50);
 
 
         }

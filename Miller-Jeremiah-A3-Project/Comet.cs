@@ -45,18 +45,22 @@ namespace MohawkGame2D
             x += Time.DeltaTime * 0f; 
             y += Time.DeltaTime * 400f;
 
-            Vector2 CometTrailLocation = new Vector2(x - 3, y - 30);
-            Vector2 CometTrailBody = new Vector2(5, 5);
+            Vector2 CometTrailLocation = new Vector2(x - 3, y - 25);
+            Vector2 CometTrailBody = new Vector2(5, 15);
 
-            Draw.FillColor = Color.Blue;
+         
+
+            Draw.SetFillColor(255, 0, 0);
             Draw.Rectangle(CometTrailLocation, CometTrailBody);
+
+       
 
 
 
             Vector2 CometLocation = new Vector2(x, y);
             Vector2 CometBody = new Vector2(width, height);
 
-            Draw.FillColor = Color.LightGray;
+            Draw.SetFillColor(55, 54, 54);
             Draw.Ellipse(CometLocation, CometBody);
 
 
