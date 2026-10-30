@@ -15,8 +15,11 @@ namespace MohawkGame2D
         Comet Comet2 = new Comet();
         Star star1 = new Star();
         Meteorite Meteorite1 = new Meteorite();
+
+        Grass Grass1 = new Grass();
         
         Star[] Stars;
+        Grass[] Grasses;
 
 
         public void Setup()
@@ -27,8 +30,10 @@ namespace MohawkGame2D
             Comet2.Setup();
             Meteorite1.Setup();
             star1.Setup();
+            Grass1.Setup();
 
             StarRandom();
+            Grass1.Setup();
           
         }
         /// <summary>
@@ -41,22 +46,29 @@ namespace MohawkGame2D
             Comet2.Update();
             Meteorite1.Update();
             star1.Update();
+            Grass1.Update();
+           
             //something I realized is you kinda need the Class1.Update in your files for it to work. Which is kinda the main thing I think I had difficulty with
             for (int i = 0; i < Stars.Length; i++)
             {
                 Stars[i].Update();
             }
 
-            
+            for (int i = 0; i < Grasses.Length; i++)
+            {
+                Grasses[i].Update();
+            }
 
+
+            //tree
             DrawTree(200 + 50, 0);
+
             //Floor
             Draw.SetFillColor(100, 110, 100);
 
             Draw.Rectangle(0, 380, 400, 20);
         }
         //getting somewhere. Ask how to make it work in the 'Comet Class'
-       // Tree 
         //as far as I understand, and I am most likely wrong, is when you use int it acts like 'memory' in the sense that if you have int x = 70, if you type x while doing positions
         //it'll appear at 70. 
         void DrawTree(int x, int y)
@@ -64,6 +76,7 @@ namespace MohawkGame2D
 
             Draw.SetFillColor(54, 55, 55);
             Draw.Rectangle(200, 200, 40, 180);
+
 
             Draw.SetFillColor(100, 110, 100);
             Draw.Circle(180, 180, 60);
@@ -89,7 +102,17 @@ namespace MohawkGame2D
 
 
             }
+            Grasses = new Grass[100];
 
+            for (int i = 0; i < Stars.Length; i++)
+            {
+
+                Grasses[i] = new Grass();
+                Grasses[i].Setup();
+
+
+
+            }
 
         }
 

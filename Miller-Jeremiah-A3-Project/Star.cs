@@ -12,7 +12,7 @@ namespace MohawkGame2D
         public void Setup()
         {
             x = Random.Integer(0, 400);
-            y = Random.Integer(0,200);
+            y = Random.Integer(0, 200);
         }
         public void Update()
         {
